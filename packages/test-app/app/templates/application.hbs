@@ -2,7 +2,7 @@
 
   <BsForm @model={{this.model}} @onSubmit={{this.submit}} @onInvalid={{this.invalid}} as |form|>
     <form.element @label="Name" @property="name" as |el|>
-      <el.control required/>
+      <el.control required minlength="3"/>
     </form.element>
     <form.element @controlType="email" @label="Email" @property="email" />
     <form.submitButton>Submit</form.submitButton>
