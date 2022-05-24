@@ -1,13 +1,13 @@
 {
   "name": "ember-bootstrap-constraint-validations",
   "version": "0.0.0",
-  "description": "The default blueprint for Embroider v2 addons.",
+  "description": "Add support for native HTML5 constraint validation to ember-bootstrap forms.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/kaliber5/ember-bootstrap-constraint-validations.git",
   "license": "MIT",
-  "author": "",
+  "author": "Simon Ihmig <simon.ihmig@kaliber5.de>",
   "files": [
     "addon-main.js",
     "dist"

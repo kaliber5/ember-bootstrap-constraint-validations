@@ -33,7 +33,7 @@
     "bootstrap": "^5.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.4.1",
-    "ember-bootstrap": "^5.1.0",
+    "ember-bootstrap": "file:.yalc/ember-bootstrap",
     "ember-bootstrap-constraint-validations": "^0.0.0",
     "ember-cli": "~4.3.0",
     "ember-cli-app-version": "^5.0.0",
