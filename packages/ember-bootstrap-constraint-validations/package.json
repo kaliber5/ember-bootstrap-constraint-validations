@@ -57,11 +57,17 @@
     "version": 2,
     "type": "addon",
     "main": "addon-main.js",
-    "app-js": {}
+    "app-js": {
+      "./components/bs-form.js": "./dist/_app_/components/bs-form.js",
+      "./components/bs-form/element.js": "./dist/_app_/components/bs-form/element.js"
+    }
   },
   "exports": {
     ".": "./dist/index.js",
     "./*": "./dist/*",
     "./addon-main.js": "./addon-main.js"
+  },
+  "peerDependencies": {
+    "ember-bootstrap": "^5.1.0"
   }
 }

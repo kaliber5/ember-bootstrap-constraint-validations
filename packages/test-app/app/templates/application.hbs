@@ -1,5 +1,9 @@
-{{page-title "TestApp"}}
+<div class="container mt-4">
 
-<h2 id="title">Welcome to Ember</h2>
+  <BsForm @model={{this.model}} @onSubmit={{this.submit}} @onInvalid={{this.invalid}} as |form|>
+    <form.element @label="Name" @property="name" />
+    <form.element @label="Email" @property="email" />
+    <form.submitButton>Submit</form.submitButton>
+  </BsForm>
 
-{{outlet}}
+</div>
