@@ -1,1 +1,6 @@
+## v0.1.0 (2022-05-25)
+
+Initial release
+
+
 # Changelog
