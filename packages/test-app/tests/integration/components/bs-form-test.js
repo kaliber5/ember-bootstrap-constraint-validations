@@ -153,7 +153,35 @@ module('Integration | Component | bs-form', function (hooks) {
     await blur('input');
     assert
       .dom('input')
-      .hasClass('is-valid', 'validation error is shown after focus out');
+      .hasClass('is-valid', 'validation success is shown after focus out');
+  });
+
+  test('validation state is updated while typing', async function (assert) {
+    this.set('model', { name: '' });
+
+    await render(hbs`
+      <BsForm @model={{this.model}} as |form|>
+        <form.element @controlType="email" @label="Name" @property="name" as |el|>
+          <el.control required/>
+        </form.element>
+      </BsForm>
+    `);
+    assert.dom('input').doesNotHaveClass('is-valid');
+
+    await focus('input');
+    await blur('input');
+
+    await fillIn('input', 'abc');
+
+    assert
+      .dom('input')
+      .hasClass('is-invalid', 'validation error is shown after focus out');
+
+    await fillIn('input', 'abc@example.com');
+
+    assert
+      .dom('input')
+      .hasClass('is-valid', 'validation success is shown after focus out');
   });
 
   test('does not throw when control element is not available', async function (assert) {
