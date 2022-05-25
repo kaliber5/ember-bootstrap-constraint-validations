@@ -34,10 +34,15 @@ export default class BsFormElement extends BaseBsFormElement {
   }
 
   @action
-  showValidationOnHandler(...args) {
+  showValidationOnHandler(event) {
     // native validation state doesn't integrate with Ember's autotracking, so we need to invalidate our `errors` getter explicitly when an
     // event occurs that could change the validation state
-    this._invalidateErrors++;
-    super.showValidationOnHandler(...args);
+
+    if (event.type !== 'focusout') {
+      // ignore focusout event, as this won't be able to change the validation state, but mutating _invalidateErrors can cause "same computation" assertions
+      this._invalidateErrors++;
+    }
+
+    super.showValidationOnHandler(event);
   }
 }
