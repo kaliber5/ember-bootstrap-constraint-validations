@@ -155,4 +155,21 @@ module('Integration | Component | bs-form', function (hooks) {
       .dom('input')
       .hasClass('is-valid', 'validation error is shown after focus out');
   });
+
+  test('does not throw when control element is not available', async function (assert) {
+    assert.expect(0);
+    this.set('model', {});
+
+    await render(hbs`
+      <BsForm @model={{this.model}} as |form|>
+        <form.element @label="First name" @property="firstname" as |el|>
+        </form.element>
+        <form.element @label="last name" @property="lastname" as |el|>
+          <el.control required/>
+        </form.element>
+      </BsForm>
+    `);
+
+    await triggerEvent('form', 'submit');
+  });
 });

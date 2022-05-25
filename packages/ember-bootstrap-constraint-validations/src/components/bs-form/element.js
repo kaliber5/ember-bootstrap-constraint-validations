@@ -24,7 +24,7 @@ export default class BsFormElement extends BaseBsFormElement {
 
   get errors() {
     let { controlElement, _invalidateErrors } = this;
-    return controlElement?.validity.valid
+    return !controlElement || controlElement.validity.valid
       ? []
       : [controlElement.validationMessage];
   }
