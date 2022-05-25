@@ -9,7 +9,10 @@ export default class BsForm extends BaseBsForm {
   }
 
   async validate(model, form) {
-    assert('Expected to receive the form element when validating.', form instanceof HTMLFormElement);
+    assert(
+      'Expected to receive the form element when validating.',
+      form instanceof HTMLFormElement
+    );
 
     if (!form.checkValidity()) {
       throw new Error();
