@@ -1,16 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { hbs } from 'ember-cli-htmlbars';
-import {
-  render,
-  triggerEvent,
-  click,
-  fillIn,
-  focus,
-  blur,
-  findAll,
-  pauseTest,
-} from '@ember/test-helpers';
+import { blur, fillIn, focus, render, triggerEvent } from '@ember/test-helpers';
 
 module('Integration | Component | bs-form', function (hooks) {
   setupRenderingTest(hooks);
