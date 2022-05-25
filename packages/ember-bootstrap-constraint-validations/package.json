@@ -51,6 +51,7 @@
     "edition": "octane"
   },
   "ember-addon": {
+    "after": "ember-bootstrap",
     "version": 2,
     "type": "addon",
     "main": "addon-main.js",
