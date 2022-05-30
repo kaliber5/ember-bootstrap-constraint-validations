@@ -8,7 +8,8 @@ Compatibility
 ------------------------------------------------------------------------------
 
 * Ember.js v3.24 or above
-* Embroider or ember-auto-import v2
+* Ember CLI v3.24 or above
+* Node.js v12 or above
 
 
 Installation
