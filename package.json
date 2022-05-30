@@ -1,6 +1,6 @@
 {
   "name": "ember-bootstrap-constraint-validations",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Add support for native HTML5 constraint validation to ember-bootstrap forms.",
   "keywords": [
     "ember-addon"
