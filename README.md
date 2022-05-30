@@ -48,7 +48,7 @@ and not the parent *element* (a wrapper `<div>`):
 In this example we have defined a "Name" text field, which is `required` and has a `minlength` of 3, as well as an optional field of type
 `email`. When submitting this form, or when focussing out of a field, the appropriate Bootstrap validation markup will be rendered:
 
-![validated form](./docs/validated-form.png)
+<img src="./docs/validated-form.png" alt="validated form" width="446" height="316"/>
 
 Note that the error messages are natively provided by the browser itself, given by the form element's [`validationMessage`](https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation#validationmessage).
 
