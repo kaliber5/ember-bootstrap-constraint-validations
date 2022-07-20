@@ -14,7 +14,8 @@ export default class BsFormElement extends BaseBsFormElement {
   }
 
   get controlElement() {
-    return document.getElementById(this.formElementId);
+    // Start element search from this._element instead of `document`, to support being inside shadow DOM
+    return this._element.querySelector(`#${this.formElementId}`);
   }
 
   get errors() {
