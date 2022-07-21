@@ -1,4 +1,13 @@
 
+
+## v1.0.1 (2022-07-21)
+
+#### :bug: Bug Fix
+* [#4](https://github.com/ember-bootstrap/ember-bootstrap-constraint-validations/pull/4) Support shadow DOM ([@simonihmig](https://github.com/simonihmig))
+
+#### Committers: 1
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+
 ## v1.0.0 (2022-05-30)
 
 #### :memo: Documentation
